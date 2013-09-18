@@ -138,10 +138,14 @@
           <section>
             <h3>Scope</h3>
             <img style="height: 75%;width:75%;" src="http://docs.angularjs.org/img/guide/concepts-scope.png" />
+            <br />
+            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
           </section>
           <section>
             <h3>Controller</h3>
             <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-controller.png" />
+            <br />
+            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
           </section>
           <section>
             <h3>Example</h3>
@@ -158,24 +162,75 @@
         </section>
         <section>
           <section>
+            <h3>Model and View</h3>
+          </section>
+          <section>
+            <h3>Model</h3>
+            <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-model.png" />
+            <br />
+            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+          </section>
+          <section>
+            <h3>View</h3>
+            <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-view.png" />
+            <br />
+            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+          </section>
+          <section>
+            <h3>HTML Templates</h3>
+            <p>Angular is different, since its templating system works on DOM objects not on strings. The template is still written in an HTML string, but it is HTML (not HTML with template sprinkled in.) The browser parses the HTML into the DOM, and the DOM becomes the input to the template engine known as the compiler. The compiler looks for directives which in turn set up watches on the model. The result is a continuously updating view which does not need template model re-merging. Your model becomes the single source-of-truth for your view.</p>
+          </section>
+          <section>
+            <p data-height="368" data-theme-id="0" data-slug-hash="yGfEi" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/yGfEi'>yGfEi</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+        </section>
+        <section>
+          <section>
             <h2>Directives</h2>
+            <p>A directive is a behavior or DOM transformation which is triggered by the presence of a custom attribute, element name, class name or comment. A directive allows you to extend the HTML vocabulary in a declarative fashion. Following is an example which enables data-binding for the contenteditable in HTML.</p>
+            <p>
           </section>
           <section>
+            <p data-height="268" data-theme-id="0" data-slug-hash="uiHaK" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/uiHaK'>uiHaK</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
           <section>
-            <a href="#">Exercise</a>
+            <a href="https://gist.github.com/twilson63/6608124">Exercise</a>
           </section>
         </section>
 
         <section>
           <section>
             <h2>Filters</h2>
+            <p>Filters perform data transformation. Typically they are used in conjunction with the locale to format the data in locale specific output. They follow the spirit of UNIX filters and use similar syntax | (pipe).</p>
           </section>
           <section>
-            <pre><code>
-              
-            </code></pre>
-            <a href="#">Demo</a>
+            <h2>Example</h2>
+            <p data-height="268" data-theme-id="0" data-slug-hash="qhrcp" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/qhrcp'>qhrcp</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h3>Built in Filters</h3>
+            <ul>
+              <li>currency</li>
+              <li>date</li>
+              <li>filter</li>
+              <li>orderBy</li>
+              <li>json</li>
+              <li>limitTo</li>
+              <li>lowercase</li>
+              <li>number</li>
+              <li>uppercase</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Creating your own Filters</h3>
+            <p>Writing your own filter is very easy: just register a new filter (injectable) factory function with your module. This factory function should return a new filter function which takes the input value as the first argument. Any filter arguments are passed in as additional arguments to the filter function.</p>
+          </section>
+          <section>
+            <p data-height="268" data-theme-id="0" data-slug-hash="dLfks" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/dLfks'>dLfks</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
           <section>
             <a href="#">Exercise</a>
