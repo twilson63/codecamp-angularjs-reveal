@@ -269,15 +269,48 @@
           </section>
           <section>
             <h3>Setup</h3>
+            <a href="http://karma-runner.github.io/0.8/index.html">Karma-runner</a>
+            <pre><code>
+npm install karma -g
+karma init
+            </code></pre>
+          </section>
+          <section>
+            <h3>Setup - using Grunt</h3>
+            <pre><code>
+npm install grunt-karma --save-dev
+# open GruntFile
+# add tasks
+grunt.loadNpmTasks('grunt-karma');
+# add Config
+karma: {
+  unit: {
+    options: {
+      framework: ['jasmine'],
+      files: ['test/**/*.js'],
+      runnerPort: 9999,
+      singleRun: true,
+      browsers: ['PhantomJS']
+    }
+  }
+}
+          </code></pre>
           </section>
           <section>
             <h3>Controllers</h3>
+            <p data-height="468" data-theme-id="0" data-slug-hash="tqegm" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/tqegm'>tqegm</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
           <section>
             <h3>Filters</h3>
-          </section>
+            <p data-height="468" data-theme-id="0" data-slug-hash="DGgte" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/DGgte'>DGgte</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>          
+            </section>
           <section>
             <h3>Directives</h3>
+            <a href="http://plnkr.co/edit/oTuRbYTPt8RyybUzk5ND?p=preview">Plnkr Example</a>
+            <br />
+            <small>Example from <a href="https://github.com/blesh">https://github.com/blesh</a></small>
           </section>
           <section>
             <a href="#">Exercise</a>
@@ -318,6 +351,12 @@
         <section>
           <section>
             <h3>Routing</h3>
+            <ul>
+              <li>ngRoute Module</li>
+            </ul>
+          </section>
+          <section>
+            
           </section>
         </section>
         <section>
