@@ -214,8 +214,34 @@
           <section>
             <a href="https://gist.github.com/twilson63/6608124">Exercise</a>
           </section>
+          <section>
+            <h3>Directive Definition Object</h3>
+          </section>
+          <section>
+            <h3>restrict</h3>
+            <p>String of subset of EACM which restricts the directive to a specific directive declaration style. If omitted, the default (attributes only) is used.</p>
+            <pre><code>
+E - Element name: &lt;my-directive&gt;&lt;/my-directive&gt;
+A - Attribute (default): &lt;div my-directive=&quot;exp&quot;&gt; &lt;/div&gt;
+C - Class: &lt;div class=&quot;my-directive: exp;&quot;&gt;&lt;/div&gt;
+M - Comment: &lt;!-- directive: my-directive exp --&gt;&lt;/p&gt;
+              
+            </code></pre>
+          </section>
+          <section>
+            <h3>replace</h3>
+            <p>if set to true then the template will replace the current element, rather than append the template to the element.</p>
+          </section>
+          <section>
+            <h3>transclude</h3>
+            <p>compile the content of the element and make it available to the directive. Typically used with ngTransclude. The advantage of transclusion is that the linking function receives a transclusion function which is pre-bound to the correct scope.</p>
+          </section>
+          <section>
+            <h3>Demo</h3>
+            <p data-height="468" data-theme-id="0" data-slug-hash="tkfjC" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/tkfjC'>tkfjC</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
         </section>
-
         <section>
           <section>
             <h2>Filters</h2>
@@ -252,7 +278,13 @@
         <section>
           <section>
             <h3>Services</h3>
-
+            <a href="http://jsfiddle.net/pkozlowski_opensource/PxdSP/14/">http://jsfiddle.net/pkozlowski_opensource/PxdSP/14/</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Components</h3>
+            <a href="http://jsfiddle.net/x8k2A/">http://jsfiddle.net/x8k2A/</a>
           </section>
         </section>
         <section>
@@ -409,6 +441,8 @@ angular.module('App')
             <pre><code>
 &lt;script src=&quot;angular-touch.js&quot;&gt;&lt;/script&gt;
             </code></pre>
+            <p data-height="368" data-theme-id="0" data-slug-hash="wdenC" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/wdenC'>wdenC</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
 
         </section>
