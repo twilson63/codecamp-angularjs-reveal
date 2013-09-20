@@ -50,12 +50,83 @@
             <small>Created by <a href="http://github.com/twilson63">Tom Wilson</a> / <a href="http://twitter.com/twilson63">@twilson63</a></small>
           </p>
         </section>
-
+        <section>
+          <h3>Introductions</h3>
+          <ul>
+            <li>Your Name</li>
+            <li>Expectation of the class</li>
+            <li>Favorite Programming Language</li>
+          </ul>
+        </section>
+        <section>
+          <h3>About Me</h3>
+          <ul>
+            <li>@twilson63</li>
+            <li>Less is more</li>
+            <li>&lt;3 the Web</li>
+            <li>&lt;3 Coding</li>
+            <li>&lt;3 Javascript</li>
+          </ul>
+        </section>
+        <section>
+          <h3>About the Mac</h3>
+          <ul>
+            <li>App Menu is at the top of the screen</li>
+            <li>Wifi settings are on the top left</li>
+            <li>Instead of Ctrl us Command</li>
+            <li>Command-Tab switches apps</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li>Why?</li>
+            <li>Demo</li>
+            <li>Real-Time App in 30 min</li>
+            <li>What?</li>
+            <li>Features and Exercises</li>
+            <li>Build an App</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why?</h2>
+          <ul>
+            <li>AngularJS</li>
+            <li>FrontEnd MVC</li>
+            <li>Javascript</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why Javascript?</h2>
+          <ul>
+            <li>Everywhere</li>
+            <li>Flexibility</li>
+            <li>Low Barrier</li>
+            <li>Full Stack</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why MVC on the FrontEnd?</h2>
+          <ul>
+            <li>Rich Client Interface</li>
+            <li>Presentation belongs on the Client</li>
+            <li>Team Development</li>
+            <li>Clean Testable Code</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why AngularJS?</h2>
+          <ul>
+            <li>Functionality</li>
+            <li>Community</li>
+            <li>Source</li>
+            <li>Experience</li>
+          </ul>
+        </section>
         <section>
           <h2>What is AngularJS?</h2>
           <p class="fragment roll-in">AngularJS is a client-side model-view-* framework</p>
         </section>
-
         <section>
           <section>
           <h3>What makes AngularJS unique from other client-side frameworks?</h3>
@@ -175,6 +246,26 @@
             <p data-height="468" data-theme-id="0" data-slug-hash="DLJsa" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/DLJsa'>DLJsa</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
+          <section>
+            <h2>Emitting Events</h2>
+            <ul>
+              <li>$on</li>
+              <li>$broadcast</li>
+              <li>$emit</li>
+            </ul>
+          </section>
+          <section>
+            <h2>$apply</h2>
+            <p>$apply() is used to execute an expression in angular from outside of the angular framework. (For example from browser DOM events, setTimeout, XHR or third party libraries). Because we are calling into the angular framework we need to perform proper scope life cycle of exception handling, executing watches.</p>
+          </section>
+          <section>
+            <h2>$watch</h2>
+            <p>Registers a listener callback to be executed whenever the watchExpression changes.</p>
+          </section>
+          <section>
+            <h2>$eval</h2>
+            <p>Executes the expression on the current scope and returns the result. Any exceptions in the expression are propagated (uncaught). This is useful when evaluating Angular expressions.</p>
+          </section>
         </section>
         <section>
           <section>
@@ -194,10 +285,65 @@
           </section>
           <section>
             <h3>HTML Templates</h3>
-            <p>Angular is different, since its templating system works on DOM objects not on strings. The template is still written in an HTML string, but it is HTML (not HTML with template sprinkled in.) The browser parses the HTML into the DOM, and the DOM becomes the input to the template engine known as the compiler. The compiler looks for directives which in turn set up watches on the model. The result is a continuously updating view which does not need template model re-merging. Your model becomes the single source-of-truth for your view.</p>
+            <p>Angular is different, since its template system works on DOM objects not on strings. The template is still written in an HTML string, but it is HTML (not HTML with template sprinkled in.) The browser parses the HTML into the DOM, and the DOM becomes the input to the template engine known as the compiler. The compiler looks for directives which in turn set up watches on the model. The result is a continuously updating view which does not need template model re-merging. Your model becomes the single source-of-truth for your view.</p>
           </section>
           <section>
             <p data-height="368" data-theme-id="0" data-slug-hash="yGfEi" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/yGfEi'>yGfEi</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h2>Expressions</h2>
+            <p data-height="268" data-theme-id="0" data-slug-hash="mdgIo" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/mdgIo'>mdgIo</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <p data-height="368" data-theme-id="0" data-slug-hash="fxIAG" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/fxIAG'>fxIAG</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h3>jqlite and angular.element</h3>
+            <a href="http://docs.angularjs.org/api/angular.element">http://docs.angularjs.org/api/angular.element</a>
+          </section>
+          <section>
+            <h2>Forms</h2>
+            <p data-height="268" data-theme-id="0" data-slug-hash="vdKpA" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/vdKpA'>vdKpA</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h2>CSS Classes</h2>
+            <p>To allow styling of form as well as controls, ngModel add these CSS classes:</p>
+
+            <ul>
+              <li>ng-valid</li>
+              <li>ng-invalid</li>
+              <li>ng-pristine</li>
+              <li>ng-dirty</li>
+            <p>The following example uses the CSS to display validity of each form control. In the example both user.name and user.email are required, but are rendered with red background only when they are dirty. This ensures that the user is not distracted with an error until after interacting with the control, and failing to satisfy its validity.</p>
+          </section>
+          <section>
+            <p data-height="468" data-theme-id="0" data-slug-hash="FEwLD" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/FEwLD'>FEwLD</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h2>Binding</h2>
+            <p>A form is an instance of FormController. The form instance can optionally be published into the scope using the name attribute. Similarly, control is an instance of NgModelController. The control instance can similarly be published into the form instance using the name attribute. This implies that the internal state of both the form and the control is available for binding in the view using the standard binding primitives.</p>
+          </section>
+          <section>
+            <p data-height="468" data-theme-id="0" data-slug-hash="ibGIe" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/ibGIe'>ibGIe</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h2>Custom Validation</h2>
+            <p>Angular provides basic implementation for most common html5 input types: (text, number, url, email, radio, checkbox), as well as some directives for validation (required, pattern, minlength, maxlength, min, max).</p>
+            <p>Defining your own validator can be done by defining your own directive which adds a custom validation function to the ngModel controller.</p>
+          </section>
+          <section>
+            <p data-height="468" data-theme-id="0" data-slug-hash="fCurb" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/fCurb'>fCurb</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h2>Custom Form Control</h2>
+            <p data-height="468" data-theme-id="0" data-slug-hash="DkorI" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/DkorI'>DkorI</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
         </section>
@@ -208,6 +354,11 @@
             <p>
           </section>
           <section>
+            <h2>ngRepeat</h2>
+            <p>The ngRepeat directive instantiates a template once per item from a collection. Each template instance gets its own scope, where the given loop variable is set to the current collection item, and $index is set to the item index or key.</p>
+            <a href="http://docs.angularjs.org/api/ng.directive:ngRepeat">http://docs.angularjs.org/api/ng.directive:ngRepeat</a>
+          </section>
+          <section>
             <p data-height="268" data-theme-id="0" data-slug-hash="uiHaK" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/uiHaK'>uiHaK</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
@@ -216,6 +367,13 @@
           </section>
           <section>
             <h3>Directive Definition Object</h3>
+          </section>
+          <section>
+            <h3>Execution</h3>
+            <ul>
+              <li>Compile</li>
+              <li>Link</li>
+            </ul>
           </section>
           <section>
             <h3>restrict</h3>
@@ -280,6 +438,28 @@ M - Comment: &lt;!-- directive: my-directive exp --&gt;&lt;/p&gt;
             <h3>Services</h3>
             <a href="http://jsfiddle.net/pkozlowski_opensource/PxdSP/14/">http://jsfiddle.net/pkozlowski_opensource/PxdSP/14/</a>
           </section>
+          <section>
+            <h2>$log</h2>
+            <p data-height="268" data-theme-id="0" data-slug-hash="qiwxI" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/qiwxI'>qiwxI</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h3>$http</h3>
+            <ul>
+              <li>get</li>
+              <li>post</li>
+              <li>put</li>
+              <li>delete</li>
+            </ul>
+          </section>
+          <section>
+            <h3>$resource</h3>
+            <p>Sugar for RESTful Backends</p>
+          </section>
+          <section>
+            <h3>Restacular</h3>
+            <a href="https://github.com/mgonto/restangular">https://github.com/mgonto/restangular</a>
+          </section>
         </section>
         <section>
           <section>
@@ -302,6 +482,16 @@ angular.module('App')
   .directive()
   .filter();
             </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Response Interceptors</h2>
+            <p>Intercepts the http request/response and gives you access before it is sent to the server.</p>
+          </section>
+          <section>
+            <h2>httpAuth Interceptor</h2>
+            <a href="https://github.com/witoldsz/angular-http-auth">https://github.com/witoldsz/angular-http-auth</a>
           </section>
         </section>
         <section>
@@ -423,6 +613,10 @@ angular.module('App')
     $locationProvider.html5Mode(true);
   });
             </code></pre>
+          </section>
+          <section>
+            <h3>when resolve</h3>
+            <p>resolve - {Object.<string, function>=} - An optional map of dependencies which should be injected into the controller. </p>
           </section>
         </section>
         <section>
