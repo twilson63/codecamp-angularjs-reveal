@@ -248,13 +248,28 @@
             <p data-height="268" data-theme-id="0" data-slug-hash="dLfks" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/dLfks'>dLfks</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
           </section>
+        </section>
+        <section>
           <section>
-            <a href="#">Exercise</a>
+            <h3>Services</h3>
+
           </section>
         </section>
         <section>
           <section>
             <h3>Modules</h3>
+            <p>AngularJS modules are not like RequireJS or CommonJS module systems, they are modules that enable the connecting of controllers, filters, and directives.</p>
+          </section>
+          <section>
+            <pre><code>
+# constructor
+angular.module('App', []);
+# getter
+angular.module('App')
+  .controller()
+  .directive()
+  .filter();
+            </code></pre>
           </section>
         </section>
         <section>
@@ -356,160 +371,78 @@ karma: {
             </ul>
           </section>
           <section>
-            
+            <pre><code>
+angular.module('App')
+  .config(function($routeProvider, $locationProvider) {
+    $routeProvider
+      .when('/', {controller: 'MainCtrl', 
+        templateUrl: '/app/templates/posts/index.html'})
+      .when('/posts/new', {controller: 'NewCtrl', 
+        templateUrl: '/app/templates/posts/form.html'})
+      .when('/posts/:id/edit', {controller: 'EditCtrl', 
+        templateUrl: '/app/templates/posts/form.html'})
+      .when('/posts/:id/comments', {controller: 'CommentsCtrl', 
+        templateUrl: '/app/templates/comments/index.html'})
+      .when('/posts/:id/comments/new', {controller: 'NewCommentCtrl', 
+        templateUrl: '/app/templates/comments/form.html'})
+      .when('/posts/:post/comments/:id/edit', {controller: 'EditCommentCtrl', 
+        templateUrl: '/app/templates/comments/form.html'});
+
+    $locationProvider.html5Mode(true);
+  });
+            </code></pre>
           </section>
         </section>
         <section>
           <section>
             <h3>Bootstrap UI</h3>
           </section>
+          <section>
+            <a href="http://angular-ui.github.io/bootstrap/">http://angular-ui.github.io/bootstrap/</a>
+          </section>
         </section>
         <section>
           <section>
             <h3>Touch</h3>
           </section>
+          <section>
+            <pre><code>
+&lt;script src=&quot;angular-touch.js&quot;&gt;&lt;/script&gt;
+            </code></pre>
+          </section>
+
         </section>
         <section>
           <section>
             <h2>ToDo App</h2>
           </section>
           <section>
-            <h2>List Items</h2>
-          </section>
-          <section>
-            <a href="#">Demo</a>
-          </section>
-          <section>
-            <a href="#">Exercise</a>
-          </section>
-          <section>
-            <h2>Add Item</h2>
-          </section>
-          <section>
-            <pre><code>
-              
-            </code></pre>
-            <a href="#">Demo</a>
-          </section>
-          <section>
-            <a href="#">Exercise</a>
-          </section>
-          <section>
-            <h2>Check Complete</h2>
-          </section>
-          <section>
-            <pre><code>
-              
-            </code></pre>
-            <a href="#">Demo</a>
-          </section>
-          <section>
-            <a href="#">Exercise</a>
-          </section>
-          <section>
-            <h2>Show Remaining</h2>
-          </section>
-          <section>
-            <pre><code>
-              
-            </code></pre>
-            <a href="#">Demo</a>
-          </section>
-          <section>
-            <a href="#">Exercise</a>
-          </section>
-          <section>
-            <h2>Remove Completed Items</h2>
-          </section>
-          <section>
-            <pre><code>
-              
-            </code></pre>
-            <a href="#">Demo</a>
-          </section>
-          <section>
-            <a href="#">Exercise</a>
-          </section>
-          <section>
-            <h2>Edit Item</h2>
-          </section>
-          <section>
-            <pre><code>
-              
-            </code></pre>
-            <a href="#">Demo</a>
-          </section>
-          <section>
-            <a href="#">Exercise</a>
-          </section>
-          <section>
-            <h2>Unit Test</h2>
-          </section>
-          <section>
-            <pre><code>
-              
-            </code></pre>
-            <a href="#">Demo</a>
-          </section>
-          <section>
-            <a href="#">Exercise</a>
+            <a href="http://twilson63.github.io/ngTodoPouch/">http://twilson63.github.io/ngTodoPouch/</a>
           </section>
         </section>
-
         <section>
           <section>
-            <h2>Exercise Voting App</h2>
+            <h2>Lab</h2>
           </section>
           <section>
-            <h2>List Headlines</h2>
+            <h2>Todo List - List Headlines</h2>
           </section>
           <section>
-            <h2>Create New Headline</h2>
+            <h2>Create Todo - Create New Headline</h2>
           </section>
           <section>
-            <h2>Vote Up Headline</h2>
+            <h2>Mark Complete - Vote Up/Down Headline</h2>
           </section>
           <section>
-            <h2>Vote Down Headline</h2>
+            <h2>Delete Todo - Delete Headline</h2>
           </section>
           <section>
-            <h2>Delete Headline</h2>
-          </section>
-          <section>
-            <h2>Sort Headlines</h2>
+            <h2>Sort Todos - Sort Headlines</h2>
           </section>
         </section>
-
         <section>
           <section>
-            <h2>Exercise CMS (Markdown)</h2>
-          </section>
-          <section>
-            <h2>List Pages</h2>
-          </section>
-          <section>
-            <h2>Create New Page</h2>
-          </section>
-          <section>
-            <h2>Create Markdown Directive</h2>
-          </section>
-          <section>
-            <h2>Edit Page</h2>
-          </section>
-          <section>
-            <h2>Delete Page</h2>
-          </section>
-          <section>
-            <h2>Create CMS View</h2>
-          </section>
-          <section>
-            <h2>Create Login</h2>
-          </section>
-          <section>
-            <h2>Create Signup</h2>
-          </section>
-          <section>
-            <h2>Http Auth</h2>
+            <h2>Exercise Code10k</h2>
           </section>
         </section>
       </div>
