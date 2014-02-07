@@ -80,108 +80,244 @@
         <section>
           <h2>Agenda</h2>
           <ul>
-            <li>Why?</li>
-            <li>Demo</li>
-            <li>What?</li>
-            <li>Features and Exercises</li>
-            <li>Build an App</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Why?</h2>
-          <ul>
-            <li>AngularJS</li>
-            <li>FrontEnd MVC</li>
-            <li>Javascript</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Why Javascript?</h2>
-          <ul>
-            <li>Everywhere</li>
-            <li>Flexibility</li>
-            <li>Low Barrier</li>
-            <li>Full Stack</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Why MVC on the FrontEnd?</h2>
-          <ul>
-            <li>Rich Client Interface</li>
-            <li>Presentation belongs on the Client</li>
-            <li>Team Development</li>
-            <li>Clean Testable Code</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Why AngularJS?</h2>
-          <ul>
-            <li>Functionality</li>
-            <li>Community</li>
-            <li>Source</li>
-            <li>Experience</li>
+            <li>What is AngularJS?</li>
+            <li>Using Directives</li>
+            <li>Using Filters</li>
+            <li>Controllers and Scopes</li>
+            <li>More Filters</li>
+            <li>Using Services</li>
+            <li>Modules</li>
+            <li>Form Directives</li>
+            <li>Creating Directives</li>
+            <li>Unit Testing</li>
+            <li>End to End Testing</li>
           </ul>
         </section>
         <section>
           <h2>What is AngularJS?</h2>
-          <p class="fragment roll-in">AngularJS is a client-side model-view-* framework</p>
+          <p class="fragment roll-in">Open Source JavaScript Framework</p>
+          <p class="fragment roll-in">HTML Enhanced for Web Apps</p>
+          <p class="fragment roll-in">extends HTML vocabulary for your application</p>
         </section>
         <section>
           <section>
-          <h3>What makes AngularJS unique from other client-side frameworks?</h3>
-          <ul>
-            <li class="fragment roll-in">Two-Way Data-binding</li>
-            <li class="fragment roll-in">Dependency Injection</li>
-            <li class="fragment roll-in">Directives</li>
-            <li class="fragment roll-in">Filters</li>
-            <li class="fragment roll-in">Testability</li>
-          </ul>
+            <h2>Using Directives</h2>
           </section>
           <section>
-            <h3>Objectives</h3>
-            <ul>
-              <li class="fragment roll-in">Review AngularJS Basics</li>
-              <li class="fragment roll-in">Deep Dive into Directives</li>
-              <li class="fragment roll-in">Dive into Filters and Underscore.JS</li>
-              <li class="fragment roll-in">Understand Unit Testing</li>
-              <li class="fragment roll-in">End to End testing</li>
-            </ul>
+            <p>A directive is how AngularJS extends HTML</p>
           </section>
           <section>
-            <h3>Learn 2 Lean</h3>
-            <p>Bootcamp is more than a lecture, it is heads down, hands on learning.  So I hope you came ready to code!</p>
-            <p>After taking this bootcamp, you should feel comfortable about the angularjs app structure, directives and filters.</p>
-            <p>Have Comfortable path/direction of next steps.</p>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Startup</h2>
-            <img style="height: 50%;width: 50%;" src="http://docs.angularjs.org/img/guide/concepts-startup.png" /><br />
-            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+            <pre><code>
+&lt;html ng-app&gt;
+  ...
+&lt;/html&gt;
+            </code></pre>
+            <p>A directive can be a html attribute</p>
           </section>
           <section>
-            <h3>StartUp</h3>
-            <p data-height="268" data-theme-id="0" data-slug-hash="gLbos" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/gLbos'>gLbos</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+            <pre><code>
+&lt;tabs&gt;
+  &lt;pane title=&quot;Tab1&quot;&gt;....&lt;/pane&gt;
+  &lt;pane title=&quot;Tab2&quot;&gt;....&lt;/pane&gt;
+&lt;/tabs&gt;
+            </code></pre>
+            <p>A directive can be a html element</p>
           </section>
           <section>
-            <h3>Runtime</h3>
-            <img style="height: 50%;width:50%;" src="http://docs.angularjs.org/img/guide/concepts-runtime.png" /><br />
-            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+            <pre><code>
+&lt;div class=&quot;ng-init: foo=&#x27;bar&#x27;&quot;&gt;&lt;/div&gt;
+&lt;div ng-bind=&quot;foo&quot;&gt;&lt;/div&gt;
+            </code></pre>
+            <p>A directive can be a html class</p>
           </section>
           <section>
-            <h3>Two-way DataBinding</h3>
-            <p data-height="398" data-theme-id="0" data-slug-hash="whglE" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/whglE'>whglE</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+            <h2>BootStrap Directive</h2>
+            <pre><code>
+&lt;html ng-app&gt;
+  &lt;body&gt;
+    &lt;div ng-init=&quot;name=&#x27;Hello World&#x27;&quot;&gt;&lt;/div&gt;
+    &lt;h2&gt;{{name}}&lt;/h2&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <a href="http://plnkr.co/edit/UYe30FjLGwdiIBKpLHc8?p=preview" target="_new">Example</a>
           </section>
           <section>
-            <h3><a href="https://gist.github.com/twilson63/6373524">Exercise</a></h3>
+            <h2>Bind Directive</h2>
+            <pre><code>
+&lt;html ng-app&gt;
+  &lt;body&gt;
+    &lt;div ng-init=&quot;name=&#x27;Hello World&#x27;&quot;&gt;&lt;/div&gt;
+    &lt;h2&gt;{{name}}&lt;/h2&gt;
+    &lt;div ng-bind=&quot;name&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <a href="http://plnkr.co/edit/UYe30FjLGwdiIBKpLHc8?p=preview" target="_new">Example</a>
           </section>
-        </section>
+          <section>
+            <h2>Model Directive</h2>
+            <pre><code>
+&lt;html ng-app&gt;
+  &lt;body&gt;
+    &lt;input ng-model=&quot;name&quot;&gt;&lt;/input&gt;
+    &lt;h2&gt;{{name}}&lt;/h2&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <a href="http://plnkr.co/edit/UYe30FjLGwdiIBKpLHc8?p=preview" target="_new">Example</a>
+          </section>
+          <section>
+            <h2>REPEAT Directive</h2>
+            <pre><code>
+&lt;html ng-app&gt;
+  &lt;body&gt;
+    &lt;div ng-init=&quot;items=[1,2,3,4]&quot;&gt;&lt;/div&gt;
+    &lt;div ng-repeat=&quot;item in items&quot;&gt;
+      {{item}}
+    &lt;/div&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;            
+            </code></pre>
+            <a href="http://plnkr.co/edit/ZVvnRuYGIw6FW5mEmBJo?p=preview" target="_new">Example</a>
+            
+          </section>
+          <section>
+            <h2>Click Directive</h2>
+<pre><code>
+&lt;html ng-app&gt;
+  &lt;body&gt;
+    &lt;div ng-init=&quot;items=[1,2,3,4]&quot;&gt;&lt;/div&gt;
+    &lt;input placeholder=&quot;enter number&quot; ng-model=&quot;anumber&quot;&gt;
+    &lt;button ng-click=&quot;items.push(anumber);anumber=&#x27;&#x27;&quot;&gt;add&lt;/button&gt;
+    &lt;div ng-repeat=&quot;item in items&quot;&gt;
+      {{item}}
+    &lt;/div&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js&quot;&gt;&lt;/script&gt;
 
-        <!-- Example of nested vertical slides -->
+  &lt;/body&gt;
+&lt;/html&gt;  
+</code></pre>
+          <a href="http://plnkr.co/edit/nKVI8uLbw4KQnhTKbsWA?p=preview" target="_new">Example</a>
+          </section>
+          <section>
+            <h2>Exercise</h2>
+            <p>Use the plunker template to create an app that appends user entered colors to a list of colors.</p>
+            <a href="http://plnkr.co/edit/Zh98qxVZHPxAftljX7tr?p=preview">Template</a>
+          </section>
+        </section>
         <section>
+          <section>
+            <h2>Using Filters</h2>
+          </section>
+          <section>
+            <h2>JSON Filter</h2>
+            <pre><code>
+&lt;div ng-init=&quot;foo={ text: &#x27;foo&#x27; }&quot;&gt;&lt;/div&gt;
+{{foo | json }}
+            </code></pre>
+            <a href="http://plnkr.co/edit/Ne5ydZWNcvKNDEK5m8zM?p=preview">Example</a>
+          </section>
+          <section>
+            <h2>CASE Filters</h2>
+            <pre><code>
+&lt;div ng-init=&quot;name='bob'&quot;&gt;&lt;/div&gt;
+{{name | uppercase }}
+{{name | lowercase }}
+            </code></pre>
+            <a href="http://plnkr.co/edit/cqZKs68ExAuqm5Jy84Bb?p=preview" target="_new">Example</a>
+          </section>
+          <section>
+            <h2>Date/Currency Filters</h2>
+            <pre><code>
+&lt;div ng-init=&quot;money=1&quot;&gt;&lt;/div&gt;
+&lt;div ng-init=&quot;today=&#x27;2014-02-07&#x27;&quot;&gt;&lt;/div&gt;
+&lt;div&gt;{{money | currency}}&lt;/div&gt;
+&lt;div&gt;{{today | date:&#x27;fullDate&#x27;}}&lt;/div&gt;
+            </code></pre>
+            <a href="http://plnkr.co/edit/uVpJaSoKDIiRGKAhMHkn?p=preview" target="_new">Example</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Controllers and Scope</h2>
+          </section>
+          <section>
+            <h2>Lets build a Todo App</h2>
+          </section>
+          <section>
+            <p>Using Angular Controllers, we are able to map a section of html to a AngularJS Scope</p>
+            <pre><code>
+&lt;div ng-controller=&quot;MainCtrl&quot;&gt;
+  ...
+&lt;/div&gt;
+&lt;script&gt;
+  function MainCtrl($scope) {
+    
+  }
+&lt;/script&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h2>Step 1: Add Items to List</h2>
+            <div><a href="http://plnkr.co/edit/VKo00Rw4cNUu1z2KmOA6?p=preview" target="_new">Template</a></div>
+            <div><a href="http://plnkr.co/edit/Rq3l0LdnXaAYu8wcVRU3?p=preview" target="_new">Answer</a></div>
+          </section>
+          <section>
+            <h2>Step 2: Complete Task</h2>
+            <p>Strikethrough the task when marked completed</p>
+            <div><a href="http://plnkr.co/edit/Rq3l0LdnXaAYu8wcVRU3?p=preview" target="_new">Template</a></div>
+            <div><a href="http://plnkr.co/edit/j8x1Dd4XB0FNCZgatsOQ?p=preview" target="_new">Answer</a></div>
+          </section>
+          <section>
+            <h2>Remove Completed</h2>
+            <div><a href="http://plnkr.co/edit/j8x1Dd4XB0FNCZgatsOQ?p=preview" target="_new">Template</a></div>
+            <div><a href="http://plnkr.co/edit/hMTSkBV8Ix2yvUpijIT0?p=preview" target="_new">Answer</a></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>List Filters</h2>
+          </section>
+          <section>
+            <h2>Order By Filter</h2>
+            <pre><code>
+&lt;li ng-repeat=&quot;item in items | orderBy:{exp}&quot;&gt;&lt;/li&gt;
+            </code></pre>
+            <p>Sort Random list of names</p>
+            <div><a href="http://plnkr.co/edit/syzqjGSBKapRuWvZgwnp?p=preview" target="_new">Template</a></div>
+            <div><a href="http://plnkr.co/edit/o3umkHPW2DU5092AYaro?p=preview" target="_new">Answer</a></div>
+            <br />
+            <h3>Bonus</h3>
+            <p>Sort List in descending order</p>
+            <div><a href="http://plnkr.co/edit/fXwhgDZJNWdSQDGV8405?p=preview" target="_new">Answer</a></div>
+          </section>
+          <section>
+            <h2>Filter Filter</h2>
+            <pre><code>
+&lt;li ng-repeat=&quot;item in items | filter:{exp}&quot;&gt;&lt;/li&gt;
+            </code></pre>
+            <p>Filter a list of Random Names</p>
+            <div><a href="http://plnkr.co/edit/syzqjGSBKapRuWvZgwnp?p=preview" target="_new">
+            <div><a href="http://plnkr.co/edit/91NFIpAO5PhgtigUaOME?p=preview" target="_new">Answer</a></div>
+          </section>
+          <section>
+            <h2>Limit To Filter</h2>
+            <pre><code>
+&lt;li ng-repeat=&quot;item in items | limitTo:3&quot;&gt;
+            </code></pre>
+            <div><a href="http://plnkr.co/edit/syzqjGSBKapRuWvZgwnp?p=preview" target="_new">Template</a></div>
+            <div><a href="http://plnkr.co/edit/68e9RwN8kvAn3iUA3yGH?p=preview" target="_new"></a></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Using Services</h2>
+          </section>
           <section>
             <h2>Dependency Injection</h2>
             <p class="fragment roll-in">DI puts the AngularJS Framework to work for you.</p>
@@ -193,115 +329,73 @@
           </section>
           <section>
             <img src="http://docs.angularjs.org/img/guide/concepts-module-injector.png" />
+            <br />
             <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
           </section>
           <section>
-            <p data-height="468" data-theme-id="0" data-slug-hash="eHjsw" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/eHjsw'>eHjsw</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <p data-height="468" data-theme-id="0" data-slug-hash="hzvLs" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/hzvLs'>hzvLs</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <h2>Example - HTML</h2>
-            <p data-height="368" data-theme-id="0" data-slug-hash="cvlBd" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/cvlBd'>cvlBd</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <h3><a href="https://gist.github.com/twilson63/6603795">Exercise</a></h3>
+            <h2>$http</h2>
+            <pre><code>
+function MainCtrl($scope, $http) {
+  $http.get('foo.json')
+    .then(function(res) {
+      $scope.items = res.data;
+    }, function(err) {
+      alert(err.message);
+    });
+}
+            </code></pre>
+            <div><a href="http://plnkr.co/edit/VlaSHAmktO36eSRvLYCb?p=preview" target="_new">Example</a></div>
           </section>
         </section>
         <section>
           <section>
-            <h2>Scope</h2>
+            <h2>Modules</h2>
           </section>
           <section>
-            <h3>Scope</h3>
-            <p data-height="368" data-theme-id="0" data-slug-hash="IhDlw" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/IhDlw'>IhDlw</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+            <h2>Application Module</h2>
+            <pre><code>
+  angular.module('App', []);
+            </code></pre>
+            <p>Calling the module method, with two parameters, initializes the module.</p>
+            <pre><code>
+  var app = angular.module('App');
+            </code></pre>
+            <p>Calling the module method, with one parameter, returns the named module.</p>
           </section>
           <section>
-            <h3>Scope</h3>
-            <img style="height: 75%;width:75%;" src="http://docs.angularjs.org/img/guide/concepts-scope.png" />
-            <br />
-            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+            <h2>Including Modules</h2>
+            <pre><code>
+  angular.module('App', ['ngRoute']);
+            </code></pre>
+            <p>In the second parameter you can include an array of modules you would like to add to your app module.</p>
           </section>
           <section>
-            <h3>Controller</h3>
-            <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-controller.png" />
-            <br />
-            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+            <h2>Application Structure</h2>
+            <div><a href="http://plnkr.co/edit/nVFqZcGxii4ebNYPg5ft?p=preview" target="_new">Basic</a></div>
           </section>
           <section>
-            <h3>Example</h3>
-            <p data-height="400" data-theme-id="0" data-slug-hash="robat" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/robat'>robot</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+            <h2>Routing</h2>
+            <pre><code>
+  angular.module('App', ['ngRoute'])
+    .config(function($routeProvider) {
+      $routeProvider
+        .when('/', {})
+        .when('/new', {})
+        .when('/:id', {});
+    });
+            </code></pre>
           </section>
           <section>
-            <h3><a href="https://gist.github.com/twilson63/6604050">Exercise</a></h3>
+            <a href="http://plnkr.co/edit/nVFqZcGxii4ebNYPg5ft?p=preview" target="_new">Routing Example</a>
           </section>
           <section>
-            <p data-height="468" data-theme-id="0" data-slug-hash="DLJsa" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/DLJsa'>DLJsa</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <h2>Emitting Events</h2>
-            <ul>
-              <li>$on</li>
-              <li>$broadcast</li>
-              <li>$emit</li>
-            </ul>
-          </section>
-          <section>
-            <h2>$apply</h2>
-            <p>$apply() is used to execute an expression in angular from outside of the angular framework. (For example from browser DOM events, setTimeout, XHR or third party libraries). Because we are calling into the angular framework we need to perform proper scope life cycle of exception handling, executing watches.</p>
-          </section>
-          <section>
-            <h2>$watch</h2>
-            <p>Registers a listener callback to be executed whenever the watchExpression changes.</p>
-          </section>
-          <section>
-            <h2>$eval</h2>
-            <p>Executes the expression on the current scope and returns the result. Any exceptions in the expression are propagated (uncaught). This is useful when evaluating Angular expressions.</p>
+            <h2>Exercise</h2>
+            <p>Build A Simple Link Service CRUD Style</p>
           </section>
         </section>
         <section>
           <section>
-            <h3>Model and View</h3>
-          </section>
-          <section>
-            <h3>Model</h3>
-            <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-model.png" />
-            <br />
-            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
-          </section>
-          <section>
-            <h3>View</h3>
-            <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-view.png" />
-            <br />
-            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
-          </section>
-          <section>
-            <h3>HTML Templates</h3>
-            <p>Angular is different, since its template system works on DOM objects not on strings. The template is still written in an HTML string, but it is HTML (not HTML with template sprinkled in.) The browser parses the HTML into the DOM, and the DOM becomes the input to the template engine known as the compiler. The compiler looks for directives which in turn set up watches on the model. The result is a continuously updating view which does not need template model re-merging. Your model becomes the single source-of-truth for your view.</p>
-          </section>
-          <section>
-            <p data-height="368" data-theme-id="0" data-slug-hash="yGfEi" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/yGfEi'>yGfEi</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <h2>Expressions</h2>
-            <p data-height="268" data-theme-id="0" data-slug-hash="mdgIo" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/mdgIo'>mdgIo</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <p data-height="368" data-theme-id="0" data-slug-hash="fxIAG" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/fxIAG'>fxIAG</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <h3>jqlite and angular.element</h3>
-            <a href="http://docs.angularjs.org/api/angular.element">http://docs.angularjs.org/api/angular.element</a>
+            <h2>Forms and Directives</h2>
           </section>
           <section>
             <h2>Forms</h2>
@@ -348,21 +442,7 @@
         </section>
         <section>
           <section>
-            <h2>Directives</h2>
-            <p>A directive is a behavior or DOM transformation which is triggered by the presence of a custom attribute, element name, class name or comment. A directive allows you to extend the HTML vocabulary in a declarative fashion. Following is an example which enables data-binding for the contenteditable in HTML.</p>
-            <p>
-          </section>
-          <section>
-            <h2>ngRepeat</h2>
-            <p>The ngRepeat directive instantiates a template once per item from a collection. Each template instance gets its own scope, where the given loop variable is set to the current collection item, and $index is set to the item index or key.</p>
-            <a href="http://docs.angularjs.org/api/ng.directive:ngRepeat">http://docs.angularjs.org/api/ng.directive:ngRepeat</a>
-          </section>
-          <section>
-            <p data-height="268" data-theme-id="0" data-slug-hash="uiHaK" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/uiHaK'>uiHaK</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <a href="https://gist.github.com/twilson63/6608124">Exercise</a>
+            <h2>Custom Directives</h2>
           </section>
           <section>
             <h3>Directive Definition Object</h3>
@@ -382,7 +462,7 @@ E - Element name: &lt;my-directive&gt;&lt;/my-directive&gt;
 A - Attribute (default): &lt;div my-directive=&quot;exp&quot;&gt; &lt;/div&gt;
 C - Class: &lt;div class=&quot;my-directive: exp;&quot;&gt;&lt;/div&gt;
 M - Comment: &lt;!-- directive: my-directive exp --&gt;&lt;/p&gt;
-              
+
             </code></pre>
           </section>
           <section>
@@ -397,100 +477,6 @@ M - Comment: &lt;!-- directive: my-directive exp --&gt;&lt;/p&gt;
             <h3>Demo</h3>
             <p data-height="468" data-theme-id="0" data-slug-hash="tkfjC" data-user="twilson63" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/tkfjC'>tkfjC</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Filters</h2>
-            <p>Filters perform data transformation. Typically they are used in conjunction with the locale to format the data in locale specific output. They follow the spirit of UNIX filters and use similar syntax | (pipe).</p>
-          </section>
-          <section>
-            <h2>Example</h2>
-            <p data-height="268" data-theme-id="0" data-slug-hash="qhrcp" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/qhrcp'>qhrcp</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <h3>Built in Filters</h3>
-            <ul>
-              <li>currency</li>
-              <li>date</li>
-              <li>filter</li>
-              <li>orderBy</li>
-              <li>json</li>
-              <li>limitTo</li>
-              <li>lowercase</li>
-              <li>number</li>
-              <li>uppercase</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Creating your own Filters</h3>
-            <p>Writing your own filter is very easy: just register a new filter (injectable) factory function with your module. This factory function should return a new filter function which takes the input value as the first argument. Any filter arguments are passed in as additional arguments to the filter function.</p>
-          </section>
-          <section>
-            <p data-height="268" data-theme-id="0" data-slug-hash="dLfks" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/dLfks'>dLfks</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h3>Services</h3>
-            <a href="http://jsfiddle.net/pkozlowski_opensource/PxdSP/14/">http://jsfiddle.net/pkozlowski_opensource/PxdSP/14/</a>
-          </section>
-          <section>
-            <h2>$log</h2>
-            <p data-height="268" data-theme-id="0" data-slug-hash="qiwxI" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/qiwxI'>qiwxI</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
-            <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-          <section>
-            <h3>$http</h3>
-            <ul>
-              <li>get</li>
-              <li>post</li>
-              <li>put</li>
-              <li>delete</li>
-            </ul>
-          </section>
-          <section>
-            <h3>$resource</h3>
-            <p>Sugar for RESTful Backends</p>
-          </section>
-          <section>
-            <h3>Restacular</h3>
-            <a href="https://github.com/mgonto/restangular">https://github.com/mgonto/restangular</a>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h3>Components</h3>
-            <a href="http://jsfiddle.net/x8k2A/">http://jsfiddle.net/x8k2A/</a>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h3>Modules</h3>
-            <p>AngularJS modules are not like RequireJS or CommonJS module systems, they are modules that enable the connecting of controllers, filters, and directives.</p>
-          </section>
-          <section>
-            <pre><code>
-# constructor
-angular.module('App', []);
-# getter
-angular.module('App')
-  .controller()
-  .directive()
-  .filter();
-            </code></pre>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Response Interceptors</h2>
-            <p>Intercepts the http request/response and gives you access before it is sent to the server.</p>
-          </section>
-          <section>
-            <h2>httpAuth Interceptor</h2>
-            <a href="https://github.com/witoldsz/angular-http-auth">https://github.com/witoldsz/angular-http-auth</a>
           </section>
         </section>
         <section>
@@ -554,6 +540,87 @@ karma: {
         </section>
         <section>
           <section>
+            <h2>End to End Testing</h2>
+            <h3>Protractor</h3>
+            <a href="https://github.com/angular/protractor">Github</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Scope</h2>
+          </section>
+          <section>
+            <h3>Scope</h3>
+            <p data-height="368" data-theme-id="0" data-slug-hash="IhDlw" data-user="twilson63" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/IhDlw'>IhDlw</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h3>Scope</h3>
+            <img style="height: 75%;width:75%;" src="http://docs.angularjs.org/img/guide/concepts-scope.png" />
+            <br />
+            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+          </section>
+          <section>
+            <h2>Emitting Events</h2>
+            <ul>
+              <li>$on</li>
+              <li>$broadcast</li>
+              <li>$emit</li>
+            </ul>
+          </section>
+          <section>
+            <h2>$apply</h2>
+            <p>$apply() is used to execute an expression in angular from outside of the angular framework. (For example from browser DOM events, setTimeout, XHR or third party libraries). Because we are calling into the angular framework we need to perform proper scope life cycle of exception handling, executing watches.</p>
+          </section>
+          <section>
+            <h2>$watch</h2>
+            <p>Registers a listener callback to be executed whenever the watchExpression changes.</p>
+          </section>
+          <section>
+            <h2>$eval</h2>
+            <p>Executes the expression on the current scope and returns the result. Any exceptions in the expression are propagated (uncaught). This is useful when evaluating Angular expressions.</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Model and View</h3>
+          </section>
+          <section>
+            <h3>Model</h3>
+            <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-model.png" />
+            <br />
+            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+          </section>
+          <section>
+            <h3>View</h3>
+            <img style="height: 75%;width: 75%" src="http://docs.angularjs.org/img/guide/concepts-view.png" />
+            <br />
+            <small><a href="http://docs.angularjs.org/guide">Diagram is from AngularJs.org</a></small>
+          </section>
+          <section>
+            <h3>HTML Templates</h3>
+            <p>Angular is different, since its template system works on DOM objects not on strings. The template is still written in an HTML string, but it is HTML (not HTML with template sprinkled in.) The browser parses the HTML into the DOM, and the DOM becomes the input to the template engine known as the compiler. The compiler looks for directives which in turn set up watches on the model. The result is a continuously updating view which does not need template model re-merging. Your model becomes the single source-of-truth for your view.</p>
+          </section>
+          <section>
+            <p data-height="368" data-theme-id="0" data-slug-hash="yGfEi" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/yGfEi'>yGfEi</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h2>Expressions</h2>
+            <p data-height="268" data-theme-id="0" data-slug-hash="mdgIo" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/mdgIo'>mdgIo</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <p data-height="368" data-theme-id="0" data-slug-hash="fxIAG" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/fxIAG'>fxIAG</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+          </section>
+          <section>
+            <h3>jqlite and angular.element</h3>
+            <a href="http://docs.angularjs.org/api/angular.element">http://docs.angularjs.org/api/angular.element</a>
+          </section>
+        </section>
+        <section>
+          <section>
             <h2>Animations</h2>
             <ul>
               <li>ngAnimate Module</li>
@@ -582,40 +649,6 @@ karma: {
             <h3>Custom Directive</h3>
             <p data-height="368" data-theme-id="0" data-slug-hash="rfwCv" data-user="twilson63" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/twilson63/pen/rfwCv'>rfwCv</a> by Tom Wilson (<a href='http://codepen.io/twilson63'>@twilson63</a>) on <a href='http://codepen.io'>CodePen</a></p>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h3>Routing</h3>
-            <ul>
-              <li>ngRoute Module</li>
-            </ul>
-          </section>
-          <section>
-            <pre><code>
-angular.module('App')
-  .config(function($routeProvider, $locationProvider) {
-    $routeProvider
-      .when('/', {controller: 'MainCtrl', 
-        templateUrl: '/app/templates/posts/index.html'})
-      .when('/posts/new', {controller: 'NewCtrl', 
-        templateUrl: '/app/templates/posts/form.html'})
-      .when('/posts/:id/edit', {controller: 'EditCtrl', 
-        templateUrl: '/app/templates/posts/form.html'})
-      .when('/posts/:id/comments', {controller: 'CommentsCtrl', 
-        templateUrl: '/app/templates/comments/index.html'})
-      .when('/posts/:id/comments/new', {controller: 'NewCommentCtrl', 
-        templateUrl: '/app/templates/comments/form.html'})
-      .when('/posts/:post/comments/:id/edit', {controller: 'EditCommentCtrl', 
-        templateUrl: '/app/templates/comments/form.html'});
-
-    $locationProvider.html5Mode(true);
-  });
-            </code></pre>
-          </section>
-          <section>
-            <h3>when resolve</h3>
-            <p>resolve - {Object.<string, function>=} - An optional map of dependencies which should be injected into the controller. </p>
           </section>
         </section>
         <section>
@@ -669,17 +702,11 @@ angular.module('App')
         </section>
         <section>
           <section>
-            <h2>Exercise Code10k</h2>
-          </section>
-        </section>
-        <section>
-          <section>
             <h2>Survey</h2>
             <a href="http://fluidsurveys.com/surveys/katie-Zh/professional-web-development-survey/?TEST_DATA=">Click Here</a>
           </section>
         </section>
       </div>
-
     </div>
 
     <script src="lib/js/head.min.js"></script>
